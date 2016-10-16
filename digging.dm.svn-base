@@ -1,0 +1,68 @@
+Event/Timer/DigTimer
+	var/tmp/mob/digger
+	var/tmp/id
+
+	New(var/EventScheduler/scheduler, var/mob/D, var/_id)
+		src.digger = D
+		src.id = _id
+		if(digger.digging_event) // If they're spamming the macro and they already triggered a dig macro, kill it.
+			digger << "<span class=announce>SYSTEM: Multiple dig instances found. Canceling dig. (macro spam?)</span>"
+			digger.Cancel_Digging()
+			return
+
+		..(scheduler, 120)
+
+	fire()
+		..()
+		if(isnull(digger)){technology_scheduler.cancel(src);return} // sanity, it is important.
+		if(id!=digger.digging_id){technology_scheduler.cancel(src);return} // Still some dig events scheduled that dont belong to the current digging event? Kill them.
+
+		if(digger.icon_state=="KB")
+
+			var/DigPower = 50
+			for (var/obj/items/Digging/digging_tool in digger)
+				if (digging_tool.suffix) // If it's equipped.
+					DigPower *= digging_tool.DigMult
+			DigPower = round(DigPower)
+			for(var/obj/Resources/resource_bag in digger)
+				resource_bag.Value += DigPower
+
+		else
+			digger.Cancel_Digging()
+
+mob/var/tmp/Event/Timer/DigTimer/digging_event = null
+mob/var/tmp/digging_id
+
+mob/proc/Cancel_Digging()
+	if(!istype(src,/mob/player)) return
+	if(src.digging_event)
+		technology_scheduler.cancel(src.digging_event)
+		src.icon_state = ""
+		spawn(15) src.digging_event = null
+
+mob/verb/Dig()
+	set category = "Skills"
+	if(icon_state == "KO" || icon_state=="Train"|| icon_state=="Meditate" ) return
+	if(isnull(src.digging_event))
+		var/area/A = src.loc.loc
+		if(istype(A,/area/Inside) || A.type==/area)
+			src << "You will not find any resources in this area..."
+			return
+		TechTab = 1
+		digging_id="[src][world.realtime][rand()]"
+		src << "You begin digging for resources."
+		icon_state = "KB"
+
+
+		Cancel_Digging()
+		sleep(15) // Sleep for 1.5 seconds to allow previous digging to be canceled.
+				// This is required because apparently, setting a macro on repeat allows you to stack them regardless.
+
+		src.digging_event = new(technology_scheduler, src, digging_id)
+		technology_scheduler.schedule(src.digging_event, 120)
+		for (var/mob/player/M in Players)
+			if (!M.client) continue
+			if (src != M && src.client.address == M.client.address)
+				M.Cancel_Digging()
+	else
+		Cancel_Digging()

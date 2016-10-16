@@ -1,0 +1,183 @@
+
+#define RADIATION_NUKE	1	//Tens style
+#define FRONTLOADED_NUKE	2	//Persh style
+
+obj/items/Nuke
+	icon='Lab.dmi'
+	icon_state="Panel1"
+	name="Nuclear Warhead"
+	density=1
+	Stealable=1
+	desc="A primed nuclear warhead."
+	var/Type = RADIATION_NUKE
+	var/Force=20
+	var/Range=20
+	var/Efficiency=20
+
+	New()
+		Reset_Desc()
+		spawn
+			if(src)
+				if(Bolted)
+					Proximity_Detonation()
+
+	proc/Reset_Desc()
+		desc=initial(desc)
+		desc+="<br>Force (Radiation): [Commas((Force**4)*500)] BP"
+		desc+="<br>Force (Front Loaded): [Commas((Force**5)*500)] BP"
+		desc+="<br>Radius: [Range]"
+		desc+="<br>Efficiency: [Efficiency]"
+
+	proc/Detonate()
+		flick("nuclearexplosion", src) //Going ham procedure commenced
+		if(src.Type == RADIATION_NUKE)
+			var/AmountMade = 0
+			for(var/turf/T in oview(src,src.Range/2)-src.loc)
+				if(T && AmountMade<Efficiency/2)
+					AmountMade++
+					T.Nuke((Force**4)-1,1) //-1 so it cant destroy walls of the same level
+			var/turf/T = src.loc
+			T.Nuke((Force**4)-1,1)	//We nuke our tile last so the proc doesn't quit
+		else if(src.Type == FRONTLOADED_NUKE)
+			for(var/turf/T in oview(src,Range/2)-src.loc)	//Now we assume that Range is the radius here.
+				if(T)
+					missile('explosion.dmi',src,T)	//Baller, shot caller, 20 inch blades on the impala
+					for(var/atom/A in T)
+						src.doDamage(A)	//Bitches goin ham
+					src.doDamage(T)	//People then the turf (go ham)
+			var/turf/T = src.loc
+			for(var/atom/A in T)	//Stuff on our turf
+				src.doDamage(A)
+			src.doDamage(T)	//	Our turf
+		del(src)	//In case we survived WE ARE GOIN HAM
+
+	verb/Set()
+		set src in oview(1,usr)
+		if(Bolted)
+			usr<<"It is already armed, you cannot reprogram it"
+			return
+		view(src)<<"[usr] has begun to program the bomb."
+		usr.saveToLog("| [usr.client.address ? (usr.client.address) : "IP not found"] | ([usr.x], [usr.y], [usr.z]) | [key_name(usr)] programmed [src].<br>")
+		Password=input("Set the access code for remote detonation.") as text
+
+	verb/Arm()
+		set src in oview(1,usr)
+		if(usr.key in Noobs)
+			usr<<"Noobed people cannot use this"
+			return
+		if(Bolted)
+			usr<<"It is already armed"
+			return
+		switch(input("Choose detonation method.") in list("Cancel", "Radiation Nuke", "Front Loaded Nuke"))
+			if("Radiation Nuke")	Type = RADIATION_NUKE
+			if("Front Loaded Nuke")	Type = FRONTLOADED_NUKE
+			else	return
+		switch(input("Choose method. Only choose if you do not plan on remote detonation. Once \
+		activated, it cannot be deactivated.") in list("Cancel","Immediate","Timer","Proximity"))
+			if("Timer") Timed_Detonation()
+			if("Proximity") Proximity_Detonation()
+			if("Immediate")	Immediate_Detonation()
+		usr.saveToLog("| [usr.client.address ? (usr.client.address) : "IP not found"] | ([usr.x], [usr.y], [usr.z]) | [key_name(usr)] armed [src].<br>")
+
+	verb/Upgrade()
+		set src in oview(1)
+		if(usr.Int_Level < src.Tech)
+			usr << "This is too advanced for you to mess with."
+			return
+		var/obj/Resources/R
+		for(var/obj/Resources/R2 in usr)
+			R = R2
+			break
+		var/Cost
+		var/Max_Upgrade=min(usr.Int_Level,((R.Value/Cost)+Tech))
+		switch(input("Upgrade what part of the warhead?") in list("Cancel", "Force", "Range", "Efficiency"))
+			if("Cancel")
+				return
+			if("Force")	//Damage
+				var/Upgrade=input("Upgrade FORCE to what level? (1-[round(Max_Upgrade)]). The maximum amount you can upgrade is determined by your intelligence (Max Upgrade cannot exceed Intelligence), and how much resources you have. So if the maximum is less than your intelligence then it is instead due to not having enough resources to upgrade it higher than the said maximum.") as num
+				Upgrade = round(max(0,min(Max_Upgrade,Upgrade)))
+				Cost = 400000/usr.Add
+				Cost*=Upgrade-Force
+				if(Cost > R.Value)
+					usr << "You do not have enough resources to upgrade it to level [Upgrade]."
+					return
+				R.Value -= Cost
+				Force = max(Upgrade,Force)
+				Tech = max(Tech,Upgrade)	//Tech is still tracked
+			if("Range")	//How far
+				Max_Upgrade = min(Max_Upgrade,75)	//Max range is 75
+				var/Upgrade=input("Upgrade RANGE to what level? (1-[round(Max_Upgrade)]). The maximum amount you can upgrade is determined by your intelligence (Max Upgrade cannot exceed Intelligence), and how much resources you have. So if the maximum is less than your intelligence then it is instead due to not having enough resources to upgrade it higher than the said maximum.") as num
+				Upgrade = round(max(0,min(Max_Upgrade,Upgrade)))
+				Cost = 800000/usr.Add
+				Cost*=Upgrade-Range
+				if(Cost > R.Value)
+					usr << "You do not have enough resources to upgrade it to level [Upgrade]."
+					return
+				R.Value -= Cost
+				Range = max(Range,Upgrade)
+				Tech = max(Tech,Upgrade)	//Tech is still tracked
+			if("Efficiency")	//How far off the damage is still 100%
+				var/Upgrade=input("Upgrade RANGE to what level? (1-[round(Max_Upgrade)]). The maximum amount you can upgrade is determined by your intelligence (Max Upgrade cannot exceed Intelligence), and how much resources you have. So if the maximum is less than your intelligence then it is instead due to not having enough resources to upgrade it higher than the said maximum.") as num
+				Upgrade = round(max(0,min(Max_Upgrade,Upgrade)))
+				Cost = 200000/usr.Add
+				Cost*=Upgrade-Range
+				if(Cost > R.Value)
+					usr << "You do not have enough resources to upgrade it to level [Upgrade]."
+					return
+				R.Value -= Cost
+				Efficiency = max(Efficiency,Upgrade)
+				Tech = max(Tech,Upgrade)	//Tech is still tracked
+
+	proc/Timed_Detonation()
+		var/Timer=input("Set the timer, in minutes. (1-30)") as num
+		Bolted=1
+		if(Timer<1) Timer=1
+		if(Timer>30) Timer=30
+		Timer=round(Timer)
+		if(Timer!=1)
+			view(src)<<"[src]: Detonation in [Timer] minutes."
+			for(var/mob/player/M in view(src))
+				if(!M.client) return
+				M.saveToLog("| [M.client.address ? (M.client.address) : "IP not found"] | ([M.x], [M.y], [M.z]) | [src]: Detonation in [Timer] minutes.<br>")
+		Timer-=1
+		sleep(Timer)
+		view(src)<<"[src]: Detonation in 1 minute."
+		sleep(300)
+		view(src)<<"[src]: Detonation in 30 seconds."
+		sleep(200)
+		view(src)<<"[src]: Detonation in 10..."
+		sleep(10)
+		for(var/mob/player/M in view(src))
+			if(!M.client) return
+			M.saveToLog("| [M.client.address ? (M.client.address) : "IP not found"] | ([M.x], [M.y], [M.z]) | [src] detonates.<br>")
+		var/Amount=9
+		while(src&&Amount)
+			view(src)<<"[src]: [Amount]..."
+			Amount-=1
+			sleep(10)
+		if(src) Detonate()
+
+	proc/Proximity_Detonation()
+		view(src)<<"[src]: Proximity Detonation activation in 1 minute"
+		for(var/mob/player/M in view(src))
+			if(!M.client) return
+			M.saveToLog("| [M.client.address ? (M.client.address) : "IP not found"] | ([M.x], [M.y], [M.z]) | [src]: Proximity Detonation activation in 1 minute.<br>")
+		Bolted=1
+		sleep(600)
+		while(src)
+			for(var/mob/A in view(5,src)) if(A.client)
+				view(src)<<"[src]: Proximity Breach. Detonation Commencing in 5 seconds..."
+				for(var/mob/player/M in view(src))
+					if(!M.client) return
+					M.saveToLog("| [M.client.address ? (M.client.address) : "IP not found"] | ([M.x], [M.y], [M.z]) | [src]: Proximity Breach. Detonation Commencing in 5 seconds...<br>")
+				spawn(50) if(src) Detonate()
+				return
+			sleep(100)
+
+	proc/Remote_Detonation()
+		Bolted=1
+		Detonate()
+
+	proc/Immediate_Detonation()
+		Bolted=1
+		Detonate()

@@ -1,0 +1,94 @@
+#define DRILLS
+
+var/list/DrillList = new()
+
+proc/loopThroughDrills()
+	var/count = 0
+
+	if(!global.DrillList.len || !global.DrillList)
+		spawn(600) // Pause 1 minute
+			.() // Then call itself again
+
+	for(var/obj/Drill/drillObj in global.DrillList)
+		count++
+		sleep(0)
+
+		//world << "DEBUG: Drill \ref[drillObj] is collecting."
+
+		for(var/area/B in range(0,drillObj))
+			if(B.type==/area||B.type==/area/Inside) continue
+			if(B.Value > 1)
+				if(B.Value>=50*drillObj.DrillRate)
+					drillObj.Resources+=50*drillObj.DrillRate
+					B.Value-=50*drillObj.DrillRate
+					//world << "DEBUG: Drill \ref[drillObj] has collected: [50*drillObj.DrillRate] from [B] ([B.type])."
+				else
+					drillObj.Resources+=B.Value
+					B.Value=0
+					//world << "DEBUG: Drill \ref[drillObj] has collected: [B.Value] from [B] ([B.type])."
+				if(B.Value<=1) continue
+					//B.Value=0
+					//continue
+			sleep(-1)
+
+		if(count >= 500) // pause every 500 drills
+			count=0
+			sleep(600) // for a full minute
+
+	spawn(3000) // Pause 5 minutes
+		.() // Then call itself again
+
+obj/Drill
+	density=1
+	var/Resources=0
+	var/DrillRate=1
+	desc="This is an automated drill.  While it has a slow extraction rate, it is always on."
+
+	New()
+		var/image/A=image(icon='Space.dmi',icon_state="d1",pixel_y=16,pixel_x=-16)
+		var/image/Z=image(icon='Space.dmi',icon_state="d2",pixel_y=16,pixel_x=16)
+		var/image/C=image(icon='Space.dmi',icon_state="d3",pixel_y=-16,pixel_x=-16)
+		var/image/D=image(icon='Space.dmi',icon_state="d4",pixel_y=-16,pixel_x=16)
+		overlays.Remove(A,Z,C,D)
+		overlays.Add(A,Z,C,D)
+		global.DrillList += src // add them to the global list
+		//..()
+
+	Click()
+		if(!(usr in range(1,src))) return
+		if(usr.client.eye!=usr) return
+		view(src)<<"[usr] withdraws [Commas(Resources)] resources from [src]"
+		usr<<"This is a level [DrillRate] drill."
+		for(var/mob/player/M in view(src)) if(M.client) M.saveToLog("| [usr.client.address ? (usr.client.address) : "IP not found"] | ([usr.x], [usr.y], [usr.z]) | [key_name(usr)] withdraws [Commas(Resources)] resources from [src] (built by: [src.Builder]).<br>")
+		for(var/obj/Resources/A in usr)
+			A.Value+=Resources
+			Resources=0
+
+	verb/Upgrade()
+		set src in oview(1)
+		if(usr.Int_Level<Tech)
+			usr<<"This is too advanced for you to mess with."
+			return
+		var/obj/Resources/A
+		for(var/obj/Resources/B in usr) A=B
+		var/Cost=40000/usr.Add
+		var/Max_Upgrade=(A.Value/Cost)+Tech
+		if(Max_Upgrade>usr.Int_Level) Max_Upgrade=usr.Int_Level
+		var/Upgrade=input("Upgrade it to what level? (1-[round(Max_Upgrade)]). The maximum amount you can upgrade is determined by your intelligence (Max Upgrade cannot exceed Intelligence), and how much resources you have. So if the maximum is less than your intelligence then it is instead due to not having enough resources to upgrade it higher than the said maximum.") as num
+		if(Upgrade>usr.Int_Level) Upgrade=usr.Int_Level
+		if(Upgrade>Max_Upgrade) Upgrade=Max_Upgrade
+		if(Upgrade<1) Upgrade=1
+		Upgrade=round(Upgrade)
+		if(Upgrade<Tech) switch(input("You wish to bring this Level [Tech] [src] to Level [Upgrade]?") in list("Yes","No"))
+			if("No") return
+		Cost*=Upgrade-Tech
+		if(Cost<0) Cost=0
+		if(Cost>A.Value)
+			usr<<"You do not have enough resources to upgrade it to level [Upgrade]"
+			return
+		view(src)<<"[usr] upgrades the [src] to level [Upgrade]"
+		for(var/mob/player/M in view(src)) if(M.client) M.saveToLog("| [usr.client.address ? (usr.client.address) : "IP not found"] | ([usr.x], [usr.y], [usr.z]) | [key_name(usr)] upgrades the [src] to level [Upgrade]. <br>")
+		A.Value-=Cost
+		Tech=Upgrade
+		desc="Level [Tech] [src]"
+		DrillRate=Upgrade
