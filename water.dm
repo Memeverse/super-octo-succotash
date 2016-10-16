@@ -1,0 +1,93 @@
+#ifndef SWIMMING
+#warn swimming.dm file is NOT included. It's in the Mob folder. Please include it. =)
+#endif
+
+
+turf/Terrain
+	Water
+		Enter(mob/M)
+			if(ismob(M))  // If they're a mob
+				if(M.icon_state=="Flight"|!M.density)  return ..() // And they're flying or not dense, let them go through water.
+				else
+					if(istype(M,/mob/player))
+						if(M.isSwimming==0)
+							spawn() M.goSwimming(src.name) // If they're a player, THEY GO SWIMMING. Send the name of the turf along so it can assign the proper overlay.
+							return ..()
+						else
+							return ..()
+			else return ..()
+
+		Water6
+			icon='Turfs 1.dmi'
+			icon_state="water"
+			Water=1
+
+		WaterReal
+			icon='Turfs 96.dmi'
+			icon_state="water1"
+			Water=1
+
+		Water5
+			icon='Turfs 4.dmi'
+			icon_state="kaiowater"
+			Water=1
+
+		LavaFall
+			icon='LavaFall.dmi'
+			density=1
+			layer=MOB_LAYER+1
+		WaterFall
+			icon='Turfs 1.dmi'
+			icon_state="waterfall"
+			density=1
+			layer=MOB_LAYER+1
+			Water=1
+
+		Water3
+			icon='Misc.dmi'
+			icon_state="Water"
+			Water=1
+
+		WaterFast
+			icon='water.dmi'
+			Water=1
+
+		Water8
+			icon='turfs.dmi'
+			icon_state="nwater"
+			Water=1
+
+		Water1
+			icon='Turfs 12.dmi'
+			icon_state="water3"
+			Water=1
+
+		Water11
+			icon='Turfs 12.dmi'
+			icon_state="water1"
+			Water=1
+
+		Water7
+			icon='turfs.dmi'
+			icon_state="lava"
+	//		luminosity=2
+
+		Water2
+			icon='Turfs 96.dmi'
+			icon_state="stillwater"
+			Water=1
+
+		Water12
+			icon='Turfs 12.dmi'
+			icon_state="water4"
+			Water=1
+
+		Water9
+			icon='Turfs 12.dmi'
+			icon_state="water1"
+			Water=1
+
+		Water10
+			icon='Turf 50.dmi'
+			icon_state="9.1"
+			Water=1

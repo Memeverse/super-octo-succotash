@@ -1,0 +1,24 @@
+turf/Terrain
+	Stairs
+
+		Stairs1
+			icon='Turfs 96.dmi'
+			icon_state="steps"
+		StairsHell
+			icon='Turf 57.dmi'
+			icon_state="hellstairs"
+		Stairs4
+			icon='Turfs 1.dmi'
+			icon_state="stairs1"
+		Stairs5
+			icon='Turfs 1.dmi'
+			icon_state="earthstairs"
+		Stairs3
+			icon='Turfs 1.dmi'
+			icon_state="stairs2"
+		Stairs2
+			icon='Turfs 12.dmi'
+			icon_state="Steps"
+		Stairs6
+			icon='Turfs Temple.dmi'
+			icon_state="council"

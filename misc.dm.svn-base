@@ -1,0 +1,107 @@
+turf/Terrain
+
+	Misc
+		MetalFloor
+			icon='metaltiles1.dmi'
+			icon_state="metalfloora"
+		MetalFloorDirty
+			icon='metaltiles1.dmi'
+			icon_state="metalfloorsn"
+		MetalFloorDark
+			icon='metaltiles1.dmi'
+			icon_state="metalfloorb"
+		MetalGrating1
+			icon='metaltiles1.dmi'
+			icon_state="gratingfloora"
+		MetalGrating2
+			icon='metaltiles1.dmi'
+			icon_state="gratingfloorb"
+
+		Bridge1V
+			icon='Turf 50.dmi'
+			icon_state="1.8"
+		Bridge1H
+			icon='Turf 50.dmi'
+			icon_state="3.3"
+		Bridge2V
+			icon='Turf 57.dmi'
+			icon_state="26"
+		Bridge2H
+			icon='Turf 57.dmi'
+			icon_state="123"
+		Bridge1V
+			icon='Turf 50.dmi'
+			icon_state="1.8"
+		Bridge1H
+			icon='Turf 50.dmi'
+			icon_state="3.3"
+		Bridge2V
+			icon='Turf 57.dmi'
+			icon_state="26"
+		Bridge2H
+			icon='Turf 57.dmi'
+			icon_state="123"
+
+		CaveEntrance
+			icon='Turf 57.dmi'
+			icon_state="13"
+
+		MountainCave
+			density=1
+			icon='Turf1.dmi'
+			icon_state="mtn cave"
+			Buildable=0
+
+		Orb
+			icon='Turf1.dmi'
+			icon_state="spirit"
+			density=0
+			Buildable=0
+		Ladder
+			icon='Turf1.dmi'
+			icon_state="ladder"
+			density=0
+			Buildable=0
+
+		Urban_Sidewalk_Top_Border
+			icon='Sidewalk.dmi'
+			icon_state="STop"
+
+		Abyss
+			icon='Hell turf.dmi'
+			Water=1
+			Buildable=0
+			Enter(mob/M)
+				if(ismob(M)) if(M.icon_state=="Flight"||!M.density) return ..()
+				else return ..()
+
+		UndergroundTunnelable1
+			icon='Turfs 4.dmi'
+			icon_state="wall"
+			density=1
+			opacity=1
+			FlyOverAble=0
+			Buildable=0
+			Health=100000
+			Enter(mob/M)
+				if(ismob(M))
+					if(M.client && M.client.holder) return ..()
+					else return
+			//	else if(!istype(M,/obj/Blast/Fireball)) del(M)
+
+			/*			for(var/obj/items/Digging/Hand_Drill/A in usr.contents)
+					if(ismob(M))
+						if(M.client && M.client.holder) return ..()
+					if(usr.Dead==0&&A.suffix=="*Equipped*")
+						Health-=100000
+					else return
+	*/
+
+		Glass_Unflyable
+			icon='Space.dmi'
+			icon_state="glass1"
+			density=1
+			FlyOverAble=0
+			Buildable=0
+			layer=MOB_LAYER+1
+			Health=9999999999999

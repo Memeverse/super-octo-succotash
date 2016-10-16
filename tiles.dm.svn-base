@@ -1,0 +1,151 @@
+turf/Terrain
+	Tiles
+
+		TileWood
+			icon='Turfs 96.dmi'
+			icon_state="woodfloor"
+		TileBlue
+			icon='turfs.dmi'
+			icon_state="tile11"
+		Tile26
+			icon='turfs.dmi'
+			icon_state="tile9"
+		Tile25
+			icon='Turfs 4.dmi'
+			icon_state="cooltiles"
+		Tile21
+			icon='Turfs 12.dmi'
+			icon_state="Girly Carpet"
+		Tile23
+			icon='Turfs 12.dmi'
+			icon_state="Wood_Floor"
+		Tile17
+			icon='turfs.dmi'
+			icon_state="roof4"
+		Tile15
+			icon='Turfs 12.dmi'
+			icon_state="stonefloor"
+		Tile6
+			icon='Turfs 12.dmi'
+			icon_state="floor4"
+		Tile14
+			icon='turfs.dmi'
+			icon_state="tile10"
+		Tile22
+			icon='FloorsLAWL.dmi'
+			icon_state="SS Floor"
+		TileStone
+			icon='Turf 57.dmi'
+			icon_state="55"
+		Tile13
+			icon='Turfs 1.dmi'
+			icon_state="ground"
+		TileWood
+			icon='Turf 57.dmi'
+			icon_state="woodfloor"
+		Tile19
+			icon='Turfs 12.dmi'
+			icon_state="floor2"
+		Tile20
+			icon='turfs.dmi'
+			icon_state="tile4"
+		Tile2
+			icon='FloorsLAWL.dmi'
+			icon_state="Tile"
+		Tile12
+			icon='Turfs 15.dmi'
+			icon_state="floor7"
+		TileBlue2
+			icon='turfs.dmi'
+			icon_state="tile12"
+		Tile13
+			icon='Turfs 15.dmi'
+			icon_state="floor6"
+		Tile24
+			icon='turfs.dmi'
+			icon_state="bridgemid2"
+		Tile10
+			icon='FloorsLAWL.dmi'
+			icon_state="Flagstone Vegeta"
+		Tile11
+			icon='Turfs 2.dmi'
+			icon_state="dirt"
+		Tile29
+			icon='temptile.dmi'
+		Tile30
+			icon='Turfs Temple.dmi'
+			icon_state="floor"
+		Tile31
+			icon='Turfs Temple.dmi'
+			icon_state="glassfloor"
+		Tile32
+			icon='Turfs Temple.dmi'
+			icon_state="tile"
+		Tile33
+			icon='Turfs Temple.dmi'
+			icon_state="tile2"
+		Tile34
+			icon='Turfs Temple.dmi'
+			icon_state="tile3"
+		Tile35
+			icon='Turfs Temple.dmi'
+			icon_state="tile4"
+		Tile36
+			icon='floor3.dmi'
+		Tile37
+			icon='woodfloor1.dmi'
+		Tile_Hell1
+			icon='Hell turf.dmi'
+			icon_state="h1"
+		Tile_Hell2
+			icon='Hell turf.dmi'
+			icon_state="h3"
+		Tile_Hell3
+			icon='Hell turf.dmi'
+			icon_state="h4"
+		Tile_Hell4
+			icon='Hell turf.dmi'
+			icon_state="h5"
+		Tile_Hell5
+			icon='Hell turf.dmi'
+		Tile18
+			icon='Turfs 12.dmi'
+			icon_state="Aluminum Floor"
+		Tile8
+			icon='Turfs 1.dmi'
+			icon_state="woodenground"
+		Tile16
+			icon='Turfs 14.dmi'
+			icon_state="Stone"
+		Tile27
+			icon='turfs.dmi'
+			icon_state="tile7"
+		Tile28
+			icon='turfs.dmi'
+			icon_state="floor"
+		TileGold
+			icon='Turf 55.dmi'
+			icon_state="goldfloor"
+		Tile9
+			icon='Turfs 18.dmi'
+			icon_state="wooden"
+		Tile8
+			icon='Turfs 18.dmi'
+			icon_state="diagwooden"
+		Tile1
+			icon='Turfs 12.dmi'
+			icon_state="Brick_Floor"
+		TileWhite
+			icon='White.dmi'
+		Tile2
+			icon='Turfs 12.dmi'
+			icon_state="Stone Crystal Path"
+		Tile3
+			icon='Turfs 12.dmi'
+			icon_state="Stones"
+		Tile4
+			icon='Turfs 12.dmi'
+			icon_state="Black Tile"
+		Tile5
+			icon='Turfs 12.dmi'
+			icon_state="Dirty Brick"

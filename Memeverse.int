@@ -1,0 +1,19 @@
+// BEGIN_INTERNALS
+/*
+LAST_COMPILE_TIME: 1476529277
+DIR: Code Code\Admin Code\AI Code\AI\bck Code\build_system Code\build_system\grid_system Code\Client Code\custom_abilities Code\Datums Code\Lib Code\Lib\EventHandler\Quicksort Code\Lib\Events Code\Mob Code\Mob\Inventory Code\Mob\Inventory\Technology Code\Mob\Observer Code\Mob\roleplay Code\Mob\skills Code\Mob\Training Code\World 
+PACKAGE_RSC_NAME: C:\Users\Aaron\Desktop\SE Code\Phoenix_rsc.zip
+AUTO_FILE_DIR: ON
+PACKAGE_DMB_INFO: 
+MAP_ICON_TYPE: 0
+PACKAGE_DME_NAME: C:\Users\Aaron\Desktop\SE Code\Phoenix_src.zip
+LAST_COMPILE_VERSION: 510.1347
+PACKAGE_TYPE: 0
+PACKAGE_DME_START: 
+WINDOW: Code\Admin\zCharacter.dm;Code\AI\npc_ai.dm;Code\Mob\assess.dm;Code\Mob\death.dm;Code\Mob\mob.dm;Code\Mob\Inventory\Technology\cloningtanks.dm;Code\Mob\Inventory\Technology\comm_devices.dm;Code\World\world.dm;Code\NOTES.dm;Code\Skills.dm;Code\out_of_use\Admin.dm;Code\Stats.dm;Code\out_of_use\Stat Loop.dm;Code\out_of_use\acknowledgements.dm;Code\custom_abilities\dragon.dm;Code\Genetics.dm;Code\Oozaru.dm;Code\Mob\Inventory\Technology\armor.dm;!!!Added.dm;Code\Mob\new_character.dm;Code\Admin\ticklag.dm;Code\Admin\Emails.dm;Code\Admin\_debugcoms.dm;Code\Paid.dm;Code\Mob\roleplay\_interface.dm;Code\Mob\skills\!general.dm;Code\Mob\Observer\observer.dm;Code\Mob\Training\shadow_spar.dm;Code\Mob\Training\meditating.dm;Code\Mob\Training\train_verb.dm
+PACKAGE_DME_INFO: 
+FILE: Code\out_of_use\Admin.dm
+PACKAGE_DMB_NAME: C:\Users\Aaron\Desktop\Xenosphere Test Server.zip
+PACKAGE_DME_DEMO: 
+*/
+// END_INTERNALS

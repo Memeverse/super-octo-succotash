@@ -1,0 +1,2009 @@
+
+
+Starting up. 06:35.54
+---------------------
+
+Loading all files...
+All files loaded.
+
+Shutting down. 06:36.00
+---------------------
+
+
+
+Starting up. 06:36.51
+---------------------
+
+Loading all files...
+All files loaded.
+
+Shutting down. 06:37.00
+---------------------
+
+
+
+Starting up. 07:41.20
+---------------------
+
+Loading all files...
+All files loaded.
+
+Shutting down. 07:41.26
+---------------------
+
+
+
+Starting up. 11:24.08
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+Loading all files...
+All files loaded.
+2015-12-19T11:26:47 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+2015-12-19T11:27:38 | Finding and removing wrongly placed Objects.
+2015-12-19T11:28:08 | OBJ_AI cleaned. 0 Erronous objects were removed.
+
+Shutting down. 11:28.29
+---------------------
+
+
+
+Starting up. 11:30.09
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+Loading all files...
+All files loaded.
+
+Shutting down. 11:30.21
+---------------------
+
+
+
+Starting up. 11:32.18
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-19T11:32:34 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+2015-12-19T11:33:27 | Finding and removing wrongly placed Objects.
+
+Shutting down. 11:33.56
+---------------------
+
+
+
+Starting up. 11:04.27
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(RustySpoonx (/client))
+RustySpoonx (/client): BanCheck()
+RustySpoonx (/client): New()
+
+Shutting down. 11:04.28
+---------------------
+
+
+
+Starting up. 11:04.43
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(RustySpoonx (/client))
+RustySpoonx (/client): BanCheck()
+RustySpoonx (/client): New()
+
+Shutting down. 11:04.43
+---------------------
+
+
+
+Starting up. 11:05.15
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(RustySpoonx (/client))
+RustySpoonx (/client): BanCheck()
+RustySpoonx (/client): New()
+
+Shutting down. 11:05.15
+---------------------
+
+
+
+Starting up. 11:05.55
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(RustySpoonx (/client))
+RustySpoonx (/client): BanCheck()
+RustySpoonx (/client): New()
+
+Shutting down. 11:05.56
+---------------------
+
+
+
+Starting up. 11:06.46
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(RustySpoonx (/client))
+RustySpoonx (/client): BanCheck()
+RustySpoonx (/client): New()
+
+Shutting down. 11:06.47
+---------------------
+
+
+
+Starting up. 11:07.45
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T11:08:03 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+
+Shutting down. 11:08.37
+---------------------
+
+
+
+Starting up. 11:10.22
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T11:10:40 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+2015-12-20T11:11:34 | Finding and removing wrongly placed Objects.
+
+Shutting down. 11:11.56
+---------------------
+
+
+
+Starting up. 11:12.54
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T11:13:10 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+2015-12-20T11:14:02 | Finding and removing wrongly placed Objects.
+
+Shutting down. 11:14.18
+---------------------
+
+
+
+Starting up. 11:15.40
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T11:15:57 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+
+Shutting down. 11:16.31
+---------------------
+
+
+
+Starting up. 11:18.47
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T11:19:05 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+
+Shutting down. 11:19.41
+---------------------
+
+
+
+Starting up. 11:21.52
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T11:22:10 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+2015-12-20T11:23:03 | Finding and removing wrongly placed Objects.
+
+Shutting down. 11:23.27
+---------------------
+
+
+
+Starting up. 11:26.32
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T11:26:49 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+2015-12-20T11:27:39 | Finding and removing wrongly placed Objects.
+2015-12-20T11:28:11 | OBJ_AI cleaned. 0 Erronous objects were removed.
+
+Shutting down. 11:33.20
+---------------------
+
+
+
+Starting up. 11:51.06
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T11:51:22 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+2015-12-20T11:52:15 | Finding and removing wrongly placed Objects.
+2015-12-20T11:52:51 | OBJ_AI cleaned. 0 Erronous objects were removed.
+
+Shutting down. 11:54.19
+---------------------
+
+
+
+Starting up. 13:12.49
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T13:13:06 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+2015-12-20T13:13:59 | Finding and removing wrongly placed Objects.
+
+Shutting down. 13:14.00
+---------------------
+
+
+
+Starting up. 13:14.10
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T13:14:26 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+
+Shutting down. 13:14.27
+---------------------
+
+
+
+Starting up. 13:31.31
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T13:31:47 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+2015-12-20T13:32:38 | Finding and removing wrongly placed Objects.
+2015-12-20T13:33:10 | OBJ_AI cleaned. 0 Erronous objects were removed.
+
+Shutting down. 13:40.18
+---------------------
+
+
+
+Starting up. 13:40.30
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T13:40:46 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+
+Shutting down. 13:41.00
+---------------------
+
+
+
+Starting up. 13:42.35
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T13:42:51 | Found no androidships, added a new one.
+No Android Ship found, one has been spawned.
+2015-12-20T13:43:42 | Finding and removing wrongly placed Objects.
+2015-12-20T13:44:12 | OBJ_AI cleaned. 0 Erronous objects were removed.
+
+Shutting down. 13:45.16
+---------------------
+
+
+
+Starting up. 13:45.20
+---------------------
+
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T13:46:28 | Finding and removing wrongly placed Objects.
+
+
+Starting up. 14:44.32
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(RustySpoonx (/client))
+RustySpoonx (/client): BanCheck()
+RustySpoonx (/client): New()
+
+Shutting down. 14:44.32
+---------------------
+
+
+
+Starting up. 14:45.05
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T14:46:12 | Finding and removing wrongly placed Objects.
+2015-12-20T14:46:41 | OBJ_AI cleaned. 0 Erronous objects were removed.
+
+Shutting down. 14:48.01
+---------------------
+
+
+
+Starting up. 15:06.46
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 15:06.49
+---------------------
+
+
+
+Starting up. 15:11.45
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T15:12:53 | Finding and removing wrongly placed Objects.
+
+Shutting down. 15:13.01
+---------------------
+
+
+
+Starting up. 15:15.36
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 15:16.34
+---------------------
+
+
+
+Starting up. 15:17.17
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: buildMainCat (/mob/proc/buildMainCat)
+  source file: grid.dm,173
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+
+Shutting down. 15:17.51
+---------------------
+
+
+
+Starting up. 15:20.05
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: updateBuildGrid (/mob/proc/updateBuildGrid)
+  source file: grid.dm,407
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): updateBuildGrid("Props", 0, 1)
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: buildMainCat (/mob/proc/buildMainCat)
+  source file: grid.dm,173
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+
+Shutting down. 15:20.37
+---------------------
+
+
+
+Starting up. 15:21.48
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 15:22.44
+---------------------
+
+
+
+Starting up. 15:22.52
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+runtime error: bad client
+proc name: updateBuildGrid (/mob/proc/updateBuildGrid)
+  source file: grid.dm,271
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): updateBuildGrid("Roofs", 0, 2)
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: updateBuildGrid (/mob/proc/updateBuildGrid)
+  source file: grid.dm,298
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): updateBuildGrid("Walls", 0, 1)
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: updateBuildGrid (/mob/proc/updateBuildGrid)
+  source file: grid.dm,325
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): updateBuildGrid("Doors", 0, 1)
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: updateBuildGrid (/mob/proc/updateBuildGrid)
+  source file: grid.dm,350
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): updateBuildGrid("Terrain", 0, 1)
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: updateBuildGrid (/mob/proc/updateBuildGrid)
+  source file: grid.dm,407
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): updateBuildGrid("Props", 0, 1)
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: gridColRow (/mob/proc/gridColRow)
+  source file: grid.dm,223
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): gridColRow("grid_buildCats", "cols")
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+runtime error: bad client
+proc name: buildMainCat (/mob/proc/buildMainCat)
+  source file: grid.dm,173
+  usr: A (/mob/player)
+  src: A (/mob/player)
+  call stack:
+A (/mob/player): buildMainCat("grid_buildCats")
+A (/mob/player): showBuildGrid()
+A (/mob/player): Update Player()
+
+Shutting down. 15:23.50
+---------------------
+
+
+
+Starting up. 22:35.33
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T22:36:43 | Finding and removing wrongly placed Objects.
+2015-12-20T22:37:12 | OBJ_AI cleaned. 0 Erronous objects were removed.
+
+Shutting down. 22:39.41
+---------------------
+
+
+
+Starting up. 22:40.57
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T22:42:05 | Finding and removing wrongly placed Objects.
+
+Shutting down. 22:42.16
+---------------------
+
+
+
+Starting up. 23:52.43
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-20T23:53:52 | Finding and removing wrongly placed Objects.
+2015-12-20T23:54:25 | OBJ_AI cleaned. 0 Erronous objects were removed.
+
+Shutting down. 23:55.34
+---------------------
+
+
+
+Starting up. 01:25.28
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 01:25.46
+---------------------
+
+
+
+Starting up. 01:41.30
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-21T01:42:40 | Finding and removing wrongly placed Objects.
+
+Shutting down. 01:43.07
+---------------------
+
+
+
+Starting up. 01:50.22
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 01:51.36
+---------------------
+
+
+
+Starting up. 13:41.11
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-21T13:42:20 | Finding and removing wrongly placed Objects.
+
+Shutting down. 13:42.24
+---------------------
+
+
+
+Starting up. 13:43.07
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 13:43.42
+---------------------
+
+
+
+Starting up. 13:43.50
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 13:43.57
+---------------------
+
+
+
+Starting up. 13:48.57
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 13:49.19
+---------------------
+
+
+
+Starting up. 13:54.26
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 13:55.07
+---------------------
+
+
+
+Starting up. 13:55.13
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 13:55.21
+---------------------
+
+
+
+Starting up. 14:02.26
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 14:03.10
+---------------------
+
+
+
+Starting up. 14:03.45
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 14:03.52
+---------------------
+
+
+
+Starting up. 14:07.05
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 14:07.46
+---------------------
+
+
+
+Starting up. 14:08.34
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 14:08.57
+---------------------
+
+
+
+Starting up. 14:09.04
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 14:09.14
+---------------------
+
+
+
+Starting up. 14:12.00
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 14:12.12
+---------------------
+
+
+
+Starting up. 14:12.18
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 14:12.56
+---------------------
+
+
+
+Starting up. 14:13.57
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 14:14.17
+---------------------
+
+
+
+Starting up. 14:17.00
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+Shutting down. 14:17.40
+---------------------
+
+
+
+Starting up. 00:30.24
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(RustySpoonx (/client))
+RustySpoonx (/client): BanCheck()
+RustySpoonx (/client): New()
+
+Shutting down. 00:30.25
+---------------------
+
+
+
+Starting up. 00:31.01
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+
+
+Starting up. 01:47.41
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-22T01:48:49 | Finding and removing wrongly placed Objects.
+2015-12-22T01:49:19 | OBJ_AI cleaned. 0 Erronous objects were removed.
+
+Shutting down. 01:49.46
+---------------------
+
+
+
+Starting up. 01:55.45
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-22T01:56:53 | Finding and removing wrongly placed Objects.
+2015-12-22T01:57:25 | OBJ_AI cleaned. 0 Erronous objects were removed.
+
+Shutting down. 01:57.40
+---------------------
+
+
+
+Starting up. 02:02.47
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-22T02:03:55 | Finding and removing wrongly placed Objects.
+2015-12-22T02:04:26 | OBJ_AI cleaned. 0 Erronous objects were removed.
+
+Shutting down. 02:04.55
+---------------------
+
+
+
+Starting up. 02:10.34
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+2015-12-22T02:11:42 | Finding and removing wrongly placed Objects.
+
+Shutting down. 02:11.53
+---------------------
+
+
+
+Starting up. 02:41.44
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+runtime error: Cannot modify null.icon.
+proc name: Sweep (/obj/items/Security_Camera/proc/Sweep)
+  source file: comm_devices.dm,30
+  usr: A (/mob/player)
+  src: Security Camera (/obj/items/Security_Camera)
+  call stack:
+Security Camera (/obj/items/Security_Camera): Sweep()
+Security Camera (/obj/items/Security_Camera): Sweep()
+
+Shutting down. 02:42.36
+---------------------
+
+
+
+Starting up. 02:46.00
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+runtime error: Cannot modify null.icon.
+proc name: Sweep (/obj/items/Security_Camera/proc/Sweep)
+  source file: comm_devices.dm,31
+  usr: A (/mob/player)
+  src: Security Camera (/obj/items/Security_Camera)
+  call stack:
+Security Camera (/obj/items/Security_Camera): Sweep()
+Security Camera (/obj/items/Security_Camera): Sweep()
+2015-12-22T02:47:07 | Finding and removing wrongly placed Objects.
+
+Shutting down. 02:47.09
+---------------------
+
+
+
+Starting up. 02:47.30
+---------------------
+
+runtime error: Cannot modify null.cd.
+proc name: CheckBan (/proc/CheckBan)
+  source file: ban.dm,10
+  usr: null
+  src: null
+  call stack:
+CheckBan(Ginseng (/client))
+Ginseng (/client): BanCheck()
+Ginseng (/client): New()
+runtime error: Cannot modify null.name.
+proc name: dd list2text test (/obj/test/texthandling/verb/dd_list2text_test)
+  source file: TextHandling.dm,290
+  usr: null
+  src: the texthandling (/obj/test/texthandling)
+  call stack:
+the texthandling (/obj/test/texthandling): dd list2text test()
+dd run tests()
+: New()
+Loading all files...
+All files loaded.
+runtime error: Cannot modify null.icon.
+proc name: Sweep (/obj/items/Security_Camera/proc/Sweep)
+  source file: comm_devices.dm,32
+  usr: A (/mob/player)
+  src: Security Camera (/obj/items/Security_Camera)
+  call stack:
+Security Camera (/obj/items/Security_Camera): Sweep()
+Security Camera (/obj/items/Security_Camera): Sweep()

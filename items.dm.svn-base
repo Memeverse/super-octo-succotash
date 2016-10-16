@@ -1,0 +1,152 @@
+/*
+
+######### Item Saving/Loading #########
+
+*/
+
+proc/add_CreatedItems(var/item)
+
+	if(!CreatedItems) CreatedItems=new
+	CreatedItems+=item
+
+proc/rem_CreatedItems(var/item)
+
+	CreatedItems-=item
+	if(!CreatedItems|!CreatedItems.len) CreatedItems=null
+
+var/list/worldObjectList = new
+
+proc/find_savableObjects()
+
+	for(var/obj/_object in world) // Find all objects in the world
+		if(!_object.z) continue
+
+		if(_object in global.worldObjectList)
+			if(!_object.z)
+				global.worldObjectList -= _object
+				del(_object)
+			else continue // If it's already in the world object list, skip it.
+
+		if(_object.Savable==1) global.worldObjectList+=_object // If it's NOT, and we want it saved, add it to the world object list.
+
+		if(istype(_object,/obj/Drill)) // add drills to the global list.
+			if(_object in global.DrillList) continue
+			global.DrillList += _object
+
+proc/SaveItems()
+	world<<"Saving items..."
+	var/foundobjects=0
+	var/E = 1
+	var/savefile/F=new("Data/ItemSaves/ItemSave[E].bdb")
+	var/list/L=new
+
+	if(global.startRuin) F["success"] << global.startRuin
+
+	for(var/obj/A in global.worldObjectList)
+		if(!A.z) continue
+
+		if(A.Savable||istype(A,/obj/TrainingEq))
+			foundobjects ++
+			A.savedX = A.x
+			A.savedY = A.y
+			A.savedZ = A.z
+			L += A
+
+		if(foundobjects % 3000 == 0)
+			F["SavedItems"] << L
+			E ++
+			F=new("Data/ItemSaves/ItemSave[E].bdb")
+			L=new
+
+	for(var/mob/A in global.worldObjectList)
+		if(istype(A,/mob/Drone))
+			foundobjects ++
+			A.savedX=A.x
+			A.savedY=A.y
+			A.savedZ=A.z
+			L+=A
+
+		if(foundobjects % 3000 == 0)
+			F["SavedItems"] << L
+			E ++
+			F=new("Data/ItemSaves/ItemSave[E].bdb")
+			L=new
+
+	if(foundobjects % 3000 != 0)
+		F["SavedItems"] << L
+
+
+	world<<"<span class=\"announce\">Items saved ([foundobjects] items)</span>"
+
+proc/LoadItems()
+	var/amount=0
+
+	if(fexists("Data/ItemSave.bdb"))
+		var/savefile/F=new("Data/ItemSave.bdb")
+
+		if(length(F["success"])) global.startRuin = 1
+
+		var/list/L=F["SavedItems"]
+		//F["SavedItems"]>>L
+		for(var/obj/A in L)
+			amount++
+			A.loc=locate(A.savedX,A.savedY,A.savedZ)
+			global.worldObjectList+=A
+			if(A.Savable!=1) A.Savable=1 // Backwards compatability with older versions
+		for(var/mob/A in L)
+			amount++
+			A.loc=locate(A.savedX,A.savedY,A.savedZ)
+			global.worldObjectList+=A
+
+		fcopy("Data/ItemSave.bdb","Data/ItemSaves/ItemSave.bdb.backup") // Make a backup
+		fdel("Data/ItemSave.bdb") // Delete the original so the loading protocl defaults to the newer files upon next boot
+		world<<"<span class=\"announce\">Items Loaded ([amount]).</span>"
+
+	else if(fexists("Data/ItemSaves/ItemSave1.bdb"))
+		spawn(0) LoadItemFiles()
+
+	spawn(1) SpawnMaterial()
+	global.ItemsLoaded=1
+
+	spawn(1) loopThroughDrills()
+
+proc/LoadItemFiles(E=1, amount=0)
+
+	if(fexists("Data/ItemSaves/ItemSave[E].bdb")) // Check if the file exists
+		var/savefile/F=new("Data/ItemSaves/ItemSave[E].bdb") // Load it
+		if(length(F["success"])) global.startRuin = 1
+
+		var/list/L=F["SavedItems"]
+
+		for(var/obj/A in L) // Loop through all objects that could be in the file
+			amount++
+			A.loc=locate(A.savedX,A.savedY,A.savedZ)
+			global.worldObjectList+=A
+			if(A.Savable!=1) A.Savable=1 // Backwards compatability with older versions
+		for(var/mob/A in L)
+			amount++
+			A.loc=locate(A.savedX,A.savedY,A.savedZ)
+			global.worldObjectList+=A
+
+		E++
+
+		.(E,amount) // Recursive call (basically, move onto the next file)
+
+	else
+		world<<"<span class=\"announce\">Items Loaded ([amount]).</span>"
+
+
+proc/SpawnMaterial()
+
+/* Find the androidship */
+	var/count=0
+	for(var/obj/AndroidShips/A in world)
+		count++
+	if(count>=2)
+		SpawnAndroidShip()
+		errors << "Duplicate androidship removed."
+		world << "<span class=\"announce\">Duplicate androidship removed.</span>"
+	if(count<=0)
+		SpawnAndroidShip()
+		errors << "No Android Ship found, one has been spawned."
+		world << "<span class=\"announce\">No Android Ship found, one has been spawned.</span>"

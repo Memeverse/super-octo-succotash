@@ -1,0 +1,83 @@
+turf
+	Upgradeable
+		Roofs
+
+			RoofTech
+				icon='Space.dmi'
+				icon_state="top"
+				density=1
+				opacity=1
+				Enter(atom/A)
+					if(FlyOverAble||ghostDens_check(A)||(!A.density&&istype(A,/obj/items/Bomb))) return ..()
+					else return
+			Hell_Roof
+				icon='Hell turf.dmi'
+				density=1
+				opacity=1
+				luminosity=1
+				Enter(atom/A)
+					if(FlyOverAble||ghostDens_check(A)||(!A.density&&istype(A,/obj/items/Bomb))) return ..()
+					else return
+			Roof1
+				icon='Turfs 96.dmi'
+				icon_state="roof3"
+				density=1
+				opacity=1
+				luminosity=1
+				Enter(atom/A)
+					if(FlyOverAble||ghostDens_check(A)||(!A.density&&istype(A,/obj/items/Bomb))) return ..()
+					else return
+			Roof2
+				icon='Turfs.dmi'
+				icon_state="roof2"
+				density=1
+				opacity=1
+				luminosity=1
+				Enter(atom/A)
+					if(FlyOverAble||ghostDens_check(A)||(!A.density&&istype(A,/obj/items/Bomb))) return ..()
+					else return
+			Roof3
+				icon='Turfs 96.dmi'
+				icon_state="roof4"
+				density=1
+				opacity=1
+				luminosity=1
+				Enter(atom/A)
+					if(FlyOverAble||ghostDens_check(A)||(!A.density&&istype(A,/obj/items/Bomb))) return ..()
+					else return
+			RoofWhite
+				icon='turfs.dmi'
+				icon_state="block_wall1"
+				density=1
+				opacity=1
+				luminosity=1
+				Enter(atom/A)
+					if(FlyOverAble||ghostDens_check(A)||(!A.density&&istype(A,/obj/items/Bomb))) return ..()
+					else return
+			MetalRoof1
+				icon='metaltiles1.dmi'
+				icon_state="metalroofa"
+				density=1
+				opacity=1
+				luminosity=1
+				Enter(atom/A)
+					if(FlyOverAble||ghostDens_check(A)||(!A.density&&istype(A,/obj/items/Bomb))) return ..()
+					else return
+			MetalRoof2
+				icon='metaltiles1.dmi'
+				icon_state="metalroofb"
+				density=1
+				opacity=1
+				luminosity=1
+				Enter(atom/A)
+					if(FlyOverAble||ghostDens_check(A)||(!A.density&&istype(A,/obj/items/Bomb))) return ..()
+					else return
+			MetalRoof3
+				icon='metaltiles1.dmi'
+				icon_state="metalroofc"
+				density=1
+				opacity=1
+				luminosity=1
+				Enter(atom/A)
+					if(FlyOverAble||ghostDens_check(A)||(!A.density&&istype(A,/obj/items/Bomb))) return ..()
+					else return
