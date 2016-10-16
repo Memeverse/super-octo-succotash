@@ -1,0 +1,38 @@
+obj/Attacks/Sokidan
+	Difficulty=5
+	icon='17.dmi'
+	desc="This makes a very powerful guided bomb of energy that explodes on contact. If you can get it \
+	to actually hit someone it is a very nice attack. It will move faster and faster as you master it."
+	var/Sokidan_Delay=50
+	verb/Sokidan()
+		set category="Skills"
+		if((usr.icon_state in list("Meditate","Train","KO","KB"))||usr.Frozen) return
+		if(!usr.move|usr.attacking|usr.Ki<50) return
+		Using=1
+		usr.attacking=3
+		usr.Ki-=50
+		if(Sokidan_Delay>2) Sokidan_Delay-=1
+		var/obj/ranged/Blast/A=new
+		A.Sokidan=1
+		A.Belongs_To=usr
+		A.icon=icon
+		A.loc=get_step(usr,NORTH)
+		A.Explosive=1
+		A.Shockwave=1
+		A.Piercer=0
+		A.Damage=usr.BP*usr.Pow*100*Ki_Power
+		A.Power=100*usr.BP*Ki_Power
+		A.Offense=usr.Off
+		sleep(100/usr.SpdMod)
+		if(A)
+			A.density=0
+			flick("Blast",usr)
+			spawn(100) if(usr)
+				usr.attacking=0
+				Using=0
+			while(A&&usr)
+				Using=1
+				step(A,usr.dir)
+				if(A) A.density=1
+				sleep(Sokidan_Delay)
+		Using=0

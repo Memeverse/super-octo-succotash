@@ -1,0 +1,194 @@
+obj/Attacks/Experience=0.1
+
+obj/ranged
+
+	luminosity=2 // Yes, energy attacks give light.
+	layer=MOB_LAYER+1
+	Savable=0 // This is part of the saving system. Objects that should be savable are set to 1.
+	density=1 // A ray of light that hits you like a brick wall.
+	Grabbable=0
+	var
+		tmp
+			maxSteps=60 // maxSteps a ranged object can take before it gets deleted.
+					// This value is usually assigned upon using the attack, 60 is a default value.
+
+		Damage
+		Fatal=1
+		Explosive
+		Shockwave
+		Piercer
+		Paralysis
+		Beam
+		Shuriken
+		Shrapnel //Shrapnel from explosions if any
+		Deflectable=1
+		Power=1 //BP of the Blast. Force can be obtained by dividing damage by Power.
+		Offense=1
+		Distance=30
+
+
+
+	Move()
+		if(!Belongs_To){del(src);return}
+
+		maxSteps --
+		if(!maxSteps){del(src);return}
+
+		else if(src.x<2||src.x>=(world.maxx-1)||src.y<2||src.y>=(world.maxy-1))
+			del(src)
+			return
+
+		if(density&&!Sokidan)
+			Distance-=1
+			if(Distance<=0){del(src);return}
+
+		return ..()
+
+
+	New(_loc,mob/_owner)
+
+		if(_owner)
+			src.dir = _owner.dir
+			if(!src.loc) src.loc = get_step(_owner,_owner.dir)
+			Belongs_To = _owner
+
+		if(type!=/obj/ranged/Blast/Genki_Dama)
+			spawn(1)
+				if(Belongs_To&&ismob(Belongs_To)&&Belongs_To.icon_state!="Blast")
+					if(Belongs_To.client)
+						flick("Blast",Belongs_To)
+
+		if(istype(src,/obj/ranged/Blast))
+			spawn(300)
+				if(src){del(src);return}
+
+		//..()
+
+	Bump(atom/Z)
+
+		// Please remember that returning TRUE or FALSE will determine if the Bump() proc of either Beam or Blast will also be allowed to run whatever code it has.
+		// Returning false means it ends here. Returning TRUE means the child Bump() procs are allowed to execute their code as well.
+
+		if(Z)
+			if(Z.type==type&&Z.dir==dir) // If two blasts/beams are bumping but going in the same direction.
+				density=0 // Then set their density to 0, allowing for combined beams and attacks.
+				spawn(1) if(src) density=1
+				return TRUE
+
+			if(ismob(Z)) // They're a mob!
+
+				var/mob/A=Z
+
+				if(ghostDens_check(A)) return FALSE
+
+				if(A.insideTank) return FALSE
+
+					// They have KI-Absorb. Omnomnom.
+
+				if(A.Blast_Absorb&&A.Ki<A.MaxKi*2&&(A.dir==turn(dir,180)||A.Blast_Absorb>=2)&&A.icon_state!="KO")
+					A.Ki+=A.MaxKi*0.01
+					A.Blast_Absorb_Graphics()
+					del(src)
+					return TRUE
+
+		// They have a cybernetic shield!
+
+				for(var/obj/Cybernetics/Force_Field/S in A) if(S.suffix)
+					for(var/obj/Cybernetics/Generator/G in A) if(G.suffix)
+						if(G.Current>80)
+							G.Current = max(0, (G.Current - 80) )
+							A.Force_Field()
+							G.desc = initial(G.desc)+"<br>[Commas(G.Current)] Battery Remaining"
+							del(src)
+							return TRUE
+
+		// They have a shield!
+
+				for(var/obj/items/Force_Field/S in A) if(S.Level>0) //if(S.suffix)
+					// Damage is handled seperately in the individual objects
+					if(S.Level<=0)
+						S.Level=0
+						S.suffix=null
+						view(src)<<"[A]'s force field is drained!"
+						for(var/mob/player/M in view(A)) if(M.client) M.saveToLog("| [A.client.address ? (A.client.address) : "IP not found"] | ([A.x], [A.y], [A.z]) | [key_name(A)] 's force field is drained!\n")
+					S.desc = initial(S.desc)+"<br>[Commas(S.Level)] Battery Remaining"
+					A.Force_Field()
+					return TRUE
+
+				return TRUE
+
+			if(isobj(Z)) // It's an object, but we have no special checks that overrule all ranged attacks (yet). And so we return TRUE as a default.
+				return TRUE
+
+			if(isturf(Z))
+
+
+				// assuming they're stupid enough to fire a beam at a wall/door point blank, then let's treat them to an explosion.
+				//if(usr)
+				//	if(get_dist(usr,Z)<2) // if there is an object in the adjacent tile they're facing
+				//		Explode(forced=TRUE) // Explosions far too big, so disabled for now.
+
+				return TRUE
+/*
+Procs applicable to all ranged skills.
+*/
+
+	proc/Explode(var/forced=FALSE) if(Explosive||forced)
+		for(var/atom/X in view(Explosive,src))
+			if(X.Flammable)
+				X.Burning = 1
+				X.Burn(X.Health)
+		for(var/mob/A in view(Explosive,src))
+			var/Shielding = 0
+			for(var/obj/Cybernetics/Force_Field/S in A) if(S.suffix)
+				for(var/obj/Cybernetics/Generator/G in A) if(G.suffix)
+					if(G.Current>80)
+						G.Current = max(0, (G.Current - 80) )
+						A.Force_Field()
+						del(src)
+					G.desc = initial(G.desc)+"<br>[Commas(G.Current)] Battery Remaining"
+			for(var/obj/items/Force_Field/S in A)
+				//if(S.suffix) Shielding=1
+				if(S.Level>0) Shielding=1
+			if(!Shielding)
+				A.Shockwave_Knockback(Explosive,loc)
+
+				if(isnum(A.Health))
+
+					var/RES = A.Res * 1.25
+					A.Health = max(0, (A.Health - (Damage/(A.BP*RES))*0.1) )
+					if(A.Health<=0) A.KO(Belongs_To)
+					if(Paralysis)
+						A<<"You become paralyzed"
+						A.saveToLog("| [A.client.address ? (A.client.address) : "IP not found"] | ([A.x], [A.y], [A.z]) | [key_name(A)] becomes paralyzed.\n")
+						A.Frozen=1
+
+		for(var/obj/A in view(Explosive,src)) if(A!=src&&!istype(A,/obj/ranged/Blast))
+			if(isnum(A.Health))
+				A.Health = max(0, (A.Health - Damage) )
+				if(istype(src,/obj/ranged/Blast/Fireball)) Power*=Wall_Strength
+				//if(Power>A.Health) A.Health=0
+				if(isnum(A.Health)&&A.Health<=0)
+					new/obj/BigCrater(locate(A.x,A.y,A.z))
+					del(A)
+
+		for(var/turf/A in view(Explosive,src)) if(prob(80))
+			var/obj/Explosion/B=new
+			if(!Shrapnel) B.icon='Plasma Explosion.dmi'
+			B.loc=locate(A.x,A.y,A.z)
+			if(isnum(A.Health)) A.Health-=Power*(Damage/Power)*0.001 //BP * Force/1000 (Force assumed to be 1000 on average for this)
+			//if(istype(src,/obj/Blast/Fireball)) Power*=Wall_Strength
+			//if(Power>A.Health) A.Health=0
+			if(usr!=0) A.Destroy(usr,usr.key)
+			else A.Destroy("Unknown","Unknown")
+
+		while(prob(90)&&Shrapnel)
+			var/obj/ranged/Blast/B=new(locate(x,y,z))
+			B.Damage=(Damage*0.2)+1
+			B.Belongs_To=Belongs_To
+			B.Fatal=Fatal
+			B.icon='Shuriken.dmi'
+			B.Shrapnel=1
+			if(prob(10)&&Explosive) B.Explosive=Explosive-1
+			B.dir=pick(NORTH,SOUTH,EAST,WEST,NORTHEAST,NORTHWEST,SOUTHEAST,SOUTHWEST)
+			walk(B,B.dir,rand(1,2))

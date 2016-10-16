@@ -1,0 +1,33 @@
+
+obj/items/Detonator
+	icon='Cell Phone.dmi'
+	Stealable=1
+	desc="This can be used to activate the detonation sequence on bombs or missiles from afar."
+	verb/Set() Password=input("Set a password to activate bombs of matching passwords.") as text
+	verb/Use()
+		if(usr.key in Noobs)
+			usr<<"Noobed people cannot use this"
+			return
+		if(!Password)
+			usr<<"You must set a password to activate bombs of the same password"
+			return
+		switch(input("Confirm detonation command:") in list("Yes","No"))
+			if("Yes")
+				view(usr)<<"[usr] activates their remote detonator"
+				for(var/mob/player/M in view(usr))
+					if(!M.client) return
+					M.saveToLog("| [usr.client.address ? (usr.client.address) : "IP not found"] | ([usr.x], [usr.y], [usr.z]) | [key_name(usr)] activates their remote detonator, bomb will detonate in 30 seconds.\n")
+				var/list/Bombs=new
+				for(var/obj/items/Bomb/A) Bombs+=A
+				for(var/obj/items/Nuke/A) Bombs+=A
+				for(var/obj/B in Bombs)
+					var/obj/items/Bomb/A=B
+					if(src&&A.Password==Password&&!A.Bolted)
+						if(!A.z) view(usr)<<"[src]: Command code denied for [A] (Someone is carrying it)"
+						else
+							view(usr)<<"[src]: Command code confirmed for [A]. It will detonate in 30 seconds."
+							range(20,A)<<"<font color=red><font size=2>[A]: Detonation Code Confirmed. Nuclear Detonation in 30 Seconds."
+							for(var/mob/player/M in range(20,A))
+								if(!M.client) return
+								M.saveToLog("| [M.client.address ? (M.client.address) : "IP not found"] | ([M.x], [M.y], [M.z]) | [A]: Detonation Code Confirmed. Nuclear Detonation in 30 Seconds. Location: [A.x],[A.y],[A.z]\n")
+							spawn(300) if(A) A.Remote_Detonation()

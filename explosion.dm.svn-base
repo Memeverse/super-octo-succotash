@@ -1,0 +1,26 @@
+obj/Attacks
+	Explosion
+		var/On
+		desc="This attack causes an explosion on the ground, the more you use it the bigger the explosion"
+		Difficulty=2
+		Experience=0
+		Level=0
+		verb/Settings()
+			var/Max=Experience
+			if(Max>4) Max=4
+			usr<<"This will increase the explosion radius. Current is [Level]. Minimum is 0. Max is [Max]"
+			Level=input("") as num
+			if(Level<0) Level=0
+			if(Level>Max) Level=Max
+		verb/Explosion()
+			set category="Skills"
+			if(!On)
+				usr<<"Explosion activated, click the ground to trigger."
+				usr.saveToLog("| [usr.client.address ? (usr.client.address) : "IP not found"] | ([usr.x], [usr.y], [usr.z]) | [key_name(usr)] activated explosion.<br>")
+				On=1
+				usr.Warp=0
+			else
+				usr<<"Explosion deactivated."
+				usr.saveToLog("| [usr.client.address ? (usr.client.address) : "IP not found"] | ([usr.x], [usr.y], [usr.z]) | [key_name(usr)] deactivated explosion.<br>")
+				On=0
+				usr.Warp=1

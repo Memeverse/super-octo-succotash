@@ -1,0 +1,44 @@
+obj/Attacks/Death_Ball
+	desc="This is a big attack, and is direction can be controlled. It is very powerful, but very \
+	draining, and a bit slow moving. But it does charge pretty fast for such a powerful attack, once \
+	it is fully mastered that is."
+	var/IsCharged
+	KiReq=1000
+	verb/Death_Ball()
+		set category="Skills"
+		if((usr.icon_state in list("Meditate","Train","KO","KB"))||usr.Frozen) return
+		if(usr.attacking|usr.Ki<KiReq|charging) return
+		if(!IsCharged)
+			var/obj/ranged/Blast/Genki_Dama/A=new(usr.loc)
+			A.y+=2
+			if(!A||!A.z) return
+			A.Belongs_To=usr
+			A.Damage=400*usr.BP*usr.Pow*Ki_Power
+			A.Power=400*usr.BP*Ki_Power
+			A.Offense=usr.Off
+			A.Size=1
+			A.Explosive=2
+			A.Large('Death Ball.dmi',0,0,0,180)
+			usr.attacking=3
+			charging=1
+			if(prob(10)&&Experience<1) Experience+=0.1
+			sleep(50/usr.SpdMod/Experience)
+			charging=0
+			IsCharged=1
+			usr.overlays+=usr.BlastCharge
+			usr.attacking=0
+		else
+			IsCharged=0
+			usr.Ki-=KiReq
+			usr.overlays-=usr.BlastCharge
+			flick("Attack",usr)
+			charging=1
+			var/obj/ranged/Blast/Genki_Dama/A
+			for(var/obj/ranged/Blast/Genki_Dama/B) if(B.Belongs_To==usr) A=B
+			while(A&&usr)
+				step(A,usr.dir)
+				sleep(2)
+			charging=0
+	verb/Teach(mob/player/A in view(usr))
+		set category="Other"
+		Teachify(A,2000)

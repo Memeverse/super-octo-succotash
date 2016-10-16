@@ -1,5 +1,17 @@
 K 25
 svn:wc:ra_dav:version-url
-V 57
-/usvn/svn/Phoenix/!svn/ver/175/Code/World/icon_defs/turfs
+V 60
+/usvn/svn/Phoenix/!svn/ver/173/Code/Mob/Inventory/Technology
+END
+drills.dm
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/usvn/svn/Phoenix/!svn/ver/173/Code/Mob/Inventory/Technology/drills.dm
+END
+Technology.dm
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/usvn/svn/Phoenix/!svn/ver/173/Code/Mob/Inventory/Technology/Technology.dm
 END

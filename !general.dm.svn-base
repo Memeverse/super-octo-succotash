@@ -1,0 +1,62 @@
+obj/Attacks/var
+	Wave
+	tmp/chargelvl=1
+	tmp/charging
+	tmp/streaming
+	KiReq
+	WaveMult
+	ChargeRate
+	MaxDistance
+	MoveDelay
+	Piercer
+	Power=1 //Damage multiplier
+	Explosive=0
+	Shockwave=0
+	Paralysis=0
+	Scatter=0 //A barrage effect
+	Fatal=1 //Certain attacks may not be capable of killing
+
+obj/ranged/Blast/proc/Zig_Zag(B,Z) while(src)
+	var/A=dir
+	var/C=B
+	density=0
+	while(C)
+		step_rand(src)
+		C-=1
+	density=1
+	dir=A
+	sleep(Z)
+
+obj/Crater
+	icon='Craters.dmi'
+	icon_state="small crater"
+	Health=1.#INF
+	Grabbable=0
+	Shockwaveable=0
+	New()
+		for(var/obj/Crater/A in range(0,src)) if(A!=src) del(A)
+		spawn(6000) if(src) del(src)
+		//..()
+
+obj/BigCrater
+	icon='Craters.dmi'
+	icon_state="Center"
+	Health=1.#INF
+	Grabbable=0
+	Savable=0
+	Shockwaveable=0
+	New()
+		if(src.z==0) del(src)
+		for(var/obj/BigCrater/A in view(3,src)) if(A!=src) del(src)
+		var/image/A=image(icon='Craters.dmi',icon_state="N",pixel_y=32)
+		var/image/B=image(icon='Craters.dmi',icon_state="S",pixel_y=-32)
+		var/image/C=image(icon='Craters.dmi',icon_state="E",pixel_x=32)
+		var/image/D=image(icon='Craters.dmi',icon_state="W",pixel_x=-32)
+		var/image/E=image(icon='Craters.dmi',icon_state="NE",pixel_y=32,pixel_x=32)
+		var/image/F=image(icon='Craters.dmi',icon_state="NW",pixel_y=32,pixel_x=-32)
+		var/image/G=image(icon='Craters.dmi',icon_state="SE",pixel_y=-32,pixel_x=32)
+		var/image/H=image(icon='Craters.dmi',icon_state="SW",pixel_y=-32,pixel_x=-32)
+		overlays.Remove(A,B,C,D,E,F,G,H)
+		overlays.Add(A,B,C,D,E,F,G,H)
+		spawn(6000) if(src) del(src)
+		//..()

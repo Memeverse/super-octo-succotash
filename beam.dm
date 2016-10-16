@@ -1,0 +1,31 @@
+obj/Attacks/Beam
+	Wave=1
+	Difficulty=3
+	icon='Beam3.dmi'
+	KiReq=1
+	WaveMult=1
+	ChargeRate=1
+	MaxDistance=20 //Move delay x40
+	MoveDelay=3
+	Piercer=0
+	luminosity=2
+	New()
+		BeamDescription()
+		..()	//Beams are bright...
+	verb/Beam()
+		set category="Skills"
+		// *!* usr.Stop_TrainDig_Schedulers()
+		if(usr.icon_state in list("Meditate","Train","KO","KB")) return
+		if(usr.Ki<KiReq||usr.Frozen) return
+		for(var/mob/M in range(0,usr))
+			if(M != usr) if(M.GrabbedMob == usr)
+				usr << "Can't charge a beam while being held!"
+				return
+		for(var/obj/Attacks/A in usr) if(A!=src) if(A.charging||A.streaming) return
+		usr.Beam_Macro(src)
+
+obj/Attacks/proc/BeamDescription() desc="[src] drains [KiReq]x energy to use. Does [WaveMult]x \
+damage. Charges higher every [ChargeRate*5] seconds. Has a range of [round(MaxDistance/MoveDelay)]. \
+And moves at [round(100/MoveDelay)] kilometers an hour. All beams start fully mastered."
+
+

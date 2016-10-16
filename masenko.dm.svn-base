@@ -1,0 +1,22 @@
+obj/Attacks/Masenko
+	Difficulty=10
+	Wave=1
+	icon='Beam5.dmi'
+	KiReq=20
+	WaveMult=3
+	ChargeRate=2
+	MaxDistance=10
+	MoveDelay=4
+	Piercer=0
+	luminosity=2
+	New()
+		BeamDescription()
+		..()
+	verb/Masenko()
+		set category="Skills"
+		if(usr.icon_state in list("Meditate","Train","KO","KB")) return
+		if(usr.Ki<KiReq||usr.Frozen) return
+		for(var/obj/Attacks/A in usr) if(A!=src) if(A.charging|A.streaming) return
+		if(!charging&&!usr.attacking) usr.BeamCharge(src)
+		else if(!streaming&&charging&&usr.attacking) usr.BeamStream(src)
+		else usr.BeamStop(src)
