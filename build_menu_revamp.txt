@@ -1,0 +1,36 @@
+Build menu
+
+Categories:
+
+Roofs	(/turf/Upgradeable/Roofs)				[9]		x (/turf/Upgradeable)
+
+Walls	(/turf/Upgradeable/Walls)				[30] (2x glass dus 29 ?)
+
+Doors 	(/obj/Door)								[6]
+
+Terrain (thing which change the terrain)
+	> Grass			(/turf/Terrain/Grass) 		[15]
+	> Ground		(/turf/Terrain/Ground)		[20]
+	> Sky			(/turf/Terrain/Sky)			[2]
+	> Stairs		(/turf/Terrain/Stairs)		[7]
+	> Tiles			(/turf/Terrain/Tiles)		[47]
+	> Water			(/turf/Terrain/Water)		[14]
+	> Misc			(/turf/Terrain/Misc)		[16]
+
+Props (things which decorate)
+	> Chairs		(/obj/Props/Chairs)			[14]
+	> Tables		(/obj/Props/Tables)			[7]
+	> Heatsources	(/obj/Props/Heatsources)	[4]
+	> Signs			(/obj/Props/Signs)			[2]
+
+	> Rocks			(/obj/Props/Rocks)			[13]
+	> Edges			(/obj/Props/Edges)			[22]
+	> Surf			(/obj/Props/Surf)			[12]		x (obj/Surf)
+	
+	> Bushes 		(/obj/Props/Bushes)			[6]
+	> Plants		(/obj/Props/Plants)			[21]
+	> Trees			(/obj/Props/Trees)			[16]
+
+	> Misc			(/obj/Props/Misc)			[26]
+												_____+
+TOTAL											 309

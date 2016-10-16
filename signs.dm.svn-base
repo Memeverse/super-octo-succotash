@@ -1,0 +1,14 @@
+obj
+	Props
+		Sign
+			icon='Sign.dmi'
+			density=1
+			Click() if(desc) usr<<desc
+		Sign/Information_Panel
+			icon='Lab.dmi'
+			icon_state="Radar"
+			Click() if(desc) usr<<desc
+		Sign/MailDeposit
+			icon='Urban.dmi'
+			icon_state="MailDeposit"
+			Click() if(desc) usr<<desc

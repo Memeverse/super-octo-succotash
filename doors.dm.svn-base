@@ -1,0 +1,64 @@
+obj
+	Door
+		density = 0
+		opacity = 0
+		icon = 'Door.dmi'
+		icon_state = "Closed"
+		Shockwaveable = 0
+
+		Door2
+			density=1
+			icon='Door2.dmi'
+			icon_state="Closed"
+		Rusted_Door
+			density=1
+			icon='RustedDoor.dmi'
+			icon_state="Closed"
+		Namekian_Door
+			density=1
+			icon='NamekDoor.dmi'
+			icon_state="Closed"
+		Tech_Door_1
+			density=1
+			icon='Techie Door 1.dmi'
+			icon_state="Closed"
+		Reinforced_Door
+			density=1
+			icon='Prison Door.dmi'
+			icon_state="Closed"
+		Glass_Door
+			density=1
+			icon='GlassDoors.dmi'
+			icon_state="Closed"
+
+		Click()
+			if(usr.client.mob in range(1,src))
+				range(10,src) << "<font color=#FFFF00>There is a knock at the door!"
+		New()
+			for(var/obj/Controls/C in view(1,src))
+				del(src)
+			for(var/turf/Special/Teleporter/R in view(1,src))
+				del(src)
+			Close()
+		proc
+			Open()
+				flick("Opening",src)	//Wait until door opens to let people through
+				icon_state = "Open"
+				density = 0
+				opacity = 0
+				//src.sd_SetOpacity(0)
+				//sd_ObjSpillLight(src)
+				spawn(50)
+					Close()
+			Close()
+				flick("Closing",src)	//Wait until door closes to actually be dense
+				icon_state="Closed"
+				//src.sd_SetOpacity(1)
+				//sd_ObjUnSpillLight(src)
+				opacity = 1
+				density = 1
+			check_access(var/obj/items/Door_Pass/D)
+				if(src.Password == D.Password)
+					return 1
+				else
+					return 0

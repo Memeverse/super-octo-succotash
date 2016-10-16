@@ -2,7 +2,7 @@
 
 dir
 180
-https://62.194.243.117/usvn/svn/Phoenix/Code/World/icon_defs/turfs
+https://62.194.243.117/usvn/svn/Phoenix/Code/World/icon_defs
 https://62.194.243.117/usvn/svn/Phoenix
 
 
@@ -26,9 +26,9 @@ admin
 
 3ab01416-c4ad-4a2f-ad95-9c0bc364558f
 
-terrain
+turfs
 dir
 
-upgradeable
+objs
 dir
 
