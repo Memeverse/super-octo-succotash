@@ -1,0 +1,78 @@
+#define BUILD_CATS "grid_buildCats"
+#define BUILD_SUBS "grid_buildSubs"
+#define BUILD_CONTENT "grid_Build"
+#define BUILDWINDOW "windowBuild"
+
+// These lists are their settings (which categories do they have expanded?)
+// and they're temporary because I doubt saving the list will add much of value.
+
+var/list
+	build_categ
+	buildter_sub
+	buildprop_sub
+
+/*
+
+######### Build verb and Proc for building #########
+
+*/
+/*
+mob/verb/Build()
+	set category="Other"
+	if(global.Year>=src.BirthYear+1||src.client.holder)
+		src.showBuildGrid()
+		src.verbs += /mob/builder/verb/closebuild // Give them the temporary verb
+	else
+		src << "You do not yet meet the age requirements to build."*/
+
+mob/builder/verb/closebuild()
+	set hidden = 1
+	src.Target=null
+	src.verbs -= /mob/builder/verb/closebuild
+	//src.clearGrid("grid_buildCat")
+
+	//debuglog << "[__FILE__]:[__LINE__] || src: [src ? src : "null"] usr: [usr ? usr : "null"] closebuild()"
+
+	for(var/i in build_categ)
+		build_categ[i] = 0
+
+	for(var/i in buildter_sub)
+		buildter_sub[i] = 0
+
+	for(var/i in buildprop_sub)
+		buildprop_sub[i] = 0
+
+
+/*
+The Build object handles which of the build icons has been clicked.
+They're created and added to a list using the 'Addbuilds()' proc.
+*/
+
+obj/Build
+
+	Click(location)
+
+		if(usr.RP_Total >= 20||usr.client.holder)
+
+			if(usr.Target==src)
+				usr<<"You have deselected [src]"
+				usr.Target=null
+				return
+			Build_Lay(src,usr)
+			if(usr.Target!=src)
+				usr.Target=src
+				usr<<"You have selected [src]"
+
+				var/column = text2num(copytext(location,1,2))+1
+				var/row = text2num(copytext(location,3))
+				var/obj/grid/SelectorR/A = new
+
+				usr << output(A, "grid_buildObj:[column],[row]")
+				//winshow(usr, BUILDWINDOW, 0)
+				//sleep(1)
+				//winshow(usr, BUILDWINDOW, 1)
+				winset(usr, "mapwindow", "focus=true")
+		else
+			usr << "You do not yet meet the age requirements to build."
+
+

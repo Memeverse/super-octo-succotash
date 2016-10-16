@@ -1,0 +1,1 @@
+var/list/Bandit_Hair
